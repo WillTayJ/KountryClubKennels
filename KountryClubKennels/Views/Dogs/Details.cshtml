@@ -1,0 +1,58 @@
+﻿@model KountryClubKennels.Models.Dogs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dogs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.photoPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photoPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.breed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.breed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.akctype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.akctype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

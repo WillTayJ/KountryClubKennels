@@ -1,0 +1,57 @@
+﻿@model IEnumerable<KountryClubKennels.Models.Dogs>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.photoPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.breed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.akctype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@Url.Content(item.photoPath)" width="400" />
+        </td>
+        <td>
+            <font size="6">@Html.DisplayFor(modelItem => item.breed)</font>
+</td>
+        <td>
+            <font size="6">@Html.DisplayFor(modelItem => item.akctype)</font>
+</td>
+        <td>
+            <font size="6"> @Html.DisplayFor(modelItem => item.birthday)</font>
+</td>
+        <td>
+            <font size="6"> @Html.DisplayFor(modelItem => item.name)</font>
+</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
